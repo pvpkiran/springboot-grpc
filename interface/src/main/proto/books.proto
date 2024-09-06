@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package in.phani.grpc.hello;
+
+option java_multiple_files = true;
+option java_package = "in.phani.grpc.book";
+option java_outer_classname = "BookManagementProto";
+//----------------------------------------------------------
+service BookManagementService {
+  rpc getUsersWithBookDetails (UserRequest) returns (UserDetails) {
+  }
+}
+
+message UserRequest {
+  repeated uint32 ids = 1;
+}
+
+message UserDetails {
+    bool isMember = 1;
+    repeated string booksBorrowed = 2;
+    string registrationId = 3;
+    map<string, string> books =4;
+}

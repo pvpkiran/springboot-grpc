@@ -4,7 +4,7 @@ package in.phani.grpc.hello;
 
 option java_multiple_files = true;
 option java_package = "in.phani.grpc.hello";
-option java_outer_classname = "HelloWorldProto";
+option java_outer_classname = "HelloProto";
 
 // The greeting service definition.
 service HelloService {
